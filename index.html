@@ -3,36 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
   <title>Online Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
   <!-- External Styling -->
   <link rel="stylesheet" href="/styles/index.css">
 </head>
-<!-- Internal Styling  -->
- <style>
-  *{
-    margin: 0px;
-    padding: 0px;
-    font-family: Century;
-  }
- </style>
+
 <body>
-  <header>
-    <div class="main">
-      <!-- Inline Styling  -->
-      <ul style="float: right; list-style-type: none; margin-top: 30px;">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Books</a></li>
-        <li><a href="#">My favorites</a></li>
-        <li><a href="/pages/page2.html">Sign Up</a></li>
-        <li><a href="/pages/page3.html">Sign In</a></li>
-      </ul>
+  <!-- Internal Styling  -->
+   <style>
+    .footer {
+      margin-top: 50px;
+      margin-left: 40%;
+      font-weight: 600;
+      font-style: initial;
+    }
+   </style>
+  <div class="topnav" id="myTopnav" style="background-color:#ffd6ff; overflow: hidden;">
+    <a href="#home" class="active">Home</a>
+    <a href="#news">My List</a>
+    <a href="#contact">Donate</a>
+    <!-- Dropdown  -->
+    <div class="dropdown">
+      <button class="dropbtn">Books
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Fantasy</a>
+        <a href="#">Detective</a>
+        <a href="#">Romance</a>
+      </div>
     </div>
-    <div class="title">
-        <h1>Explore our bestsellers</h1>
+    <a href="#about">About</a>
+    <input type="text" placeholder="Search...">
+    <a href="/pages/page2.html" class="login">Login</a>
+    <a href="/pages/page3.html" class="register">Register</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+<div>
+  <h1>EXPLORE OUR BESTSELLERS</h1>
+</div>
+<!-- Table tag  -->
+<table>
+  <tr>
+    <th>Author</th>
+    <th>Name of the book</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Sydney Sheldon</td>
+    <td>If Tomorrow Comes</td>
+    <td>USA</td>
+  </tr>
+  <tr>
+    <td>J.K. Rowling</td>
+    <td>Harry Potter</td>
+    <td>Britain</td>
+  </tr>
+</table>
+<div class="flexbox">
+  <!-- Inline Styling  -->
+  <div class="flex-item" style="background-color: #e7c6ff">
+    <!-- Using an Image  -->
+    <img src="/images/110680.jpg" style="float: left;"">
+    <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quidem iure dignissimos ipsa placeat, vel nemo qui velit molestiae pariatur, tempora aspernatur incidunt. Aliquam, exercitationem. Culpa obcaecati non eos voluptatum! Cum totam consequatur dolore incidunt nisi quidem! Facilis in voluptatum labore consequuntur voluptatibus, nemo assumenda ad esse suscipit inventore magnam.</article>
+  </div>
+  <!-- Using GIF  -->
+  <div class="flex-item" style="background-color:#bbd0ff ;">
+    <iframe src="https://giphy.com/embed/NFA61GS9qKZ68" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen id="gif"></iframe><p><a href="https://giphy.com/gifs/reading-dot-strategies-NFA61GS9qKZ68">Reading is FUN!!!</a></p>
+    <p id="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, quidem! Dolorem enim voluptate, in explicabo officia, itaque fugiat sed dolore neque labore vero architecto porro doloremque magni eveniet. Minus, alias.</p>
+  </div>
+  <div class="flex-item">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <img src="/images/pexels-duygugungor-16113014.jpg" class="d-block w-100" style="height: 400px; object-fit: cover;"" alt="...">
+        </div>
+        <div class="carousel-item active">
+          <img src="/images/pexels-fotios-photos-4178791.jpg" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/images/pexels-hson-27854747.jpg" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <div class="button">
-      <a href="#" class="btn"></a>
-    </div>
-  </header>
+  </div>
+</div>
+ <h3 class="footer">Visit us <i class="fa fa-instagram" aria-hidden="true"></i> <i class="fa fa-twitter" aria-hidden="true"></i><i class="fa fa-facebook-official" aria-hidden="true"></i></h3>  
+ 
 </body>
 </html>
