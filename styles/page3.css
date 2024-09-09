@@ -11,7 +11,7 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background:#c8b6ff;
+  background:linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 .login-box{
   display: flex;
@@ -20,6 +20,8 @@ body{
   width: 440px;
   height: 480px;
   padding: 30px;
+  border: #000 1px solid;
+  border-radius: 20%;
 
 }
 
@@ -88,7 +90,7 @@ section a{
 }
 .submit-btn{
   width: 100%;
-  background-color: #000;
+  background:linear-gradient(135deg, #71b7e6, #9b59b6);
     height: 60px;
     border: none;
     border-radius: 30px;
